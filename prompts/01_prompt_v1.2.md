@@ -1,6 +1,6 @@
 //As version 1.1 takes in charge the restictions in colors and visual expresion this version restrict the fonts and text according to brand
 
-**-----**
+**-----** 
 
 Create a single-page, editorial-style personal website that functions as a professional manifesto.
 

@@ -1,6 +1,7 @@
 import { SectionContainer } from "@/components/layout/SectionContainer"
 import { HeroDeclaration } from "./HeroDeclaration"
 import { HeroClosingQuote } from "./HeroClosingQuote"
+import { HERO_CONTENT, HERO_SECTIONS } from "@/core/lib/constants/constants"
 
 export function HeroSection() {
   return (
@@ -9,27 +10,48 @@ export function HeroSection() {
           size="hero"
         >
           <HeroDeclaration
-            title="Ing. Carlos Hoyos"
-            lead="RANIOT es una iniciativa privada que conecta el conocimiento académico con la práctica real en transformación digital, gobernanza de sistemas y tecnologías IoT."
-            statement="La tecnología es un medio, no un fin. Cada decisión digital debe responder a un criterio, no a una tendencia."
+            title={HERO_CONTENT.title}
+            lead={HERO_CONTENT.lead}
+            statement={HERO_CONTENT.statement}
           />
           <HeroClosingQuote
-            closingStatement="La tecnología es un medio, no un fin.  
-            Cada decisión digital debe responder a un criterio, no a una tendencia.">
+            closingStatement={HERO_CONTENT.closing} >
           </HeroClosingQuote>
           
-          <div className="mt-16 pt-8 border-t border-border">
-            <nav aria-label="Secciones del sitio">
-              <ul className="flex flex-wrap gap-x-8 gap-y-2 text-sm  justify-center text-muted-foreground">
-                <li><a href="#posicion" className="hover:text-accent transition-colors">Posición</a></li>
-                <li><a href="#gobernanza" className="hover:text-accent transition-colors">Gobernanza</a></li>
-                <li><a href="#iot" className="hover:text-accent transition-colors">IoT</a></li>
-                <li><a href="#conocimiento" className="hover:text-accent transition-colors">Conocimiento</a></li>
-                <li><a href="#referencias" className="hover:text-accent transition-colors">Referencias</a></li>
-                <li><a href="#contacto" className="hover:text-accent transition-colors">Contacto</a></li>
-              </ul>
-            </nav>
-          </div>
+          <main>
+            <div className="grid grid-cols-3 sm:grid-cols-5 auto-rows-fr border-t mt-10 pt-8 gap-2 w-full">
+              <a href="#posicion" className="relative overflow-hidden rounded-2xl col-span-2 bg-gray-100 py-2 sm:py-4 opacity-70
+                      hover:border-0 hover:bg-linear-to-br from-cyan-600 via-cyan-500 to-cyan-200  hover:scale-95 hover:text-accent-foreground
+                      transition-transform duration-200 ease-out">
+                <span className="grid place-items-center min-h-18 px-4 text-center">{HERO_SECTIONS.Position}</span>
+              </a>
+              <a href="#iot" className="relative overflow-hidden rounded-2xl col-span-1 bg-gray-100 py-2 sm:py-4 opacity-70
+                      hover:border-0 hover:bg-linear-to-br from-cyan-600 via-cyan-500 to-cyan-200  hover:scale-95 hover:text-accent-foreground
+                      transition-transform duration-200 ease-out">
+                <span className="grid place-items-center min-h-18 px-4 text-center">{HERO_SECTIONS.InternetOfThings}</span>
+              </a>
+              <a href="#gobernanza" className="relative overflow-hidden rounded-2xl col-span-1 sm:col-span-2 bg-gray-100 py-2 sm:py-4 opacity-70
+                      hover:border-0 hover:bg-linear-to-br from-cyan-600 via-cyan-500 to-cyan-200  hover:scale-95 hover:text-accent-foreground
+                      transition-transform">
+                <span className="grid place-items-center min-h-18 px-4 text-center">{HERO_SECTIONS.DigiGov}</span>
+              </a>
+              <a href="#conocimiento" className="relative overflow-hidden rounded-2xl col-span-2 bg-gray-100 py-2 sm:py-4 opacity-70
+                      hover:border-0 hover:bg-linear-to-br from-cyan-600 via-cyan-500 to-cyan-200  hover:scale-95 hover:text-accent-foreground
+                      transition-transform duration-200 ease-out">
+                <span className="grid place-items-center min-h-18 px-4 text-center"> {HERO_SECTIONS.knowledge}</span>
+              </a>
+              <a href="#referencias" className="relative overflow-hidden rounded-2xl col-span-2 bg-gray-100 py-2 sm:py-4 opacity-70
+                      hover:border-0 hover:bg-linear-to-br from-cyan-600 via-cyan-500 to-cyan-200  hover:scale-95 hover:text-accent-foreground
+                      transition-transform duration-200 ease-out">
+                <span className="grid place-items-center min-h-18 px-4 text-center">{HERO_SECTIONS.Reference}</span>
+              </a>  
+              <a href="#contacto" className="relative overflow-hidden rounded-2xl col-span-1 bg-gray-100 py-2 sm:py-4 opacity-70
+                      hover:border-0 hover:bg-linear-to-br from-cyan-600 via-cyan-500 to-cyan-200  hover:scale-95 hover:text-accent-foreground
+                      transition-transform duration-200 ease-out">
+                <span className="grid place-items-center min-h-18 px-4 text-center">{HERO_SECTIONS.Contact}</span>
+              </a>  
+            </div>
+          </main>
         </SectionContainer>
   )
 }

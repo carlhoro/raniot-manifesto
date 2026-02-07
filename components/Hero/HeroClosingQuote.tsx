@@ -13,7 +13,7 @@ export function HeroClosingQuote({
   return (
     <blockquote
       className={cn(
-        "mt-16 max-w-3xl text-center mx-auto",
+        "mt-4 sm:mt-16 max-w-3xl text-center mx-auto",
         "italic text-lg md:text-xl",
         "text-muted-foreground leading-relaxed",
         className

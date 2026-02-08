@@ -7,20 +7,12 @@ export function PositionSection() {
         </span>
         
         <h2 className="text-2xl md:text-3xl font-medium text-foreground mt-6 mb-8 text-balance leading-snug">
-          Una visión sobre tecnología y transformación digital
+          h2
         </h2>
         
         <div className="space-y-6 text-muted-foreground leading-relaxed">
           <p>
-            La digitalización no es un objetivo en sí mismo. Es un proceso que debe responder a criterios claros, planificación estructurada e intencionalidad. Adoptar herramientas sin una visión previa equivale a improvisar sobre cimientos frágiles.
-          </p>
-          
-          <p>
-            Gran parte de los proyectos de transformación digital fracasan no por falta de tecnología, sino por ausencia de planificación. Las organizaciones invierten en plataformas, licencias y automatizaciones sin haber definido primero qué problema resuelven, para quién lo resuelven y cómo medirán el éxito.
-          </p>
-          
-          <p>
-            Mi posición es clara: antes de implementar, hay que pensar. Antes de automatizar, hay que comprender. La transformación digital exige rigor, no velocidad. Exige preguntas incómodas antes de respuestas fáciles.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, cumque aspernatur! Eaque doloribus debitis quia ex dolorum dolor, quam ullam sunt, dicta ducimus officia! Optio itaque sunt sapiente labore et.
           </p>
         </div>
       </div>

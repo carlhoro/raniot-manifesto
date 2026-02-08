@@ -7,24 +7,12 @@ export function KnowledgeSection() {
         </span>
         
         <h2 className="text-2xl md:text-3xl font-medium text-foreground mt-6 mb-8 text-balance leading-snug">
-          Traducir la investigación en comprensión práctica
+          h2
         </h2>
         
         <div className="space-y-6 text-muted-foreground leading-relaxed">
           <p>
-            El conocimiento técnico y académico tiene valor cuando se transfiere. Los papers de investigación, las tesis doctorales y los estudios científicos contienen ideas que pueden transformar la práctica empresarial, pero su formato y lenguaje suelen ser inaccesibles para quienes más podrían beneficiarse de ellos.
-          </p>
-          
-          <p>
-            Parte de mi trabajo consiste en traducir ese conocimiento. No simplificarlo, sino hacerlo comprensible. Convertir abstracciones en principios aplicables. Transformar datos en decisiones informadas.
-          </p>
-          
-          <p>
-            Esta difusión no pretende ser exhaustiva ni sustituir la profundidad del trabajo académico original. La profundidad existe fuera de este sitio: en papers, repositorios, herramientas de análisis y modelos de lenguaje especializados. Aquí se ofrece el punto de entrada, la orientación, el primer paso hacia una comprensión más completa.
-          </p>
-          
-          <p>
-            El objetivo es claro: acercar el rigor académico a la práctica profesional, con lenguaje accesible y perspectiva orientada a la aplicación.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ratione ea tempora nemo neque facere corporis minus! Cum eligendi laboriosam odio suscipit architecto, nihil dolor, porro perferendis, provident numquam odit.
           </p>
         </div>
       </div>

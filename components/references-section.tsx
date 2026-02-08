@@ -31,7 +31,7 @@ export function ReferencesSection() {
                 Documentación técnica, arquitecturas de referencia y casos de estudio sobre implementaciones de Internet de las Cosas en contextos empresariales.
               </p>
             </div>
-            <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 ml-4" />
+            <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors shrink-0 ml-4" />
           </a>
           
           <a 
@@ -48,7 +48,7 @@ export function ReferencesSection() {
                 Repositorio informativo y versionado sobre modelos de gobernanza, taxonomías y marcos de decisión para sistemas digitales. Orientado a la comprensión, no al código.
               </p>
             </div>
-            <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 ml-4" />
+            <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors shrink-0 ml-4" />
           </a>
         </div>
       </div>

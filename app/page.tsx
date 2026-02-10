@@ -4,6 +4,7 @@ import { ReferencesSection } from "@/components/references-section"
 import { ContactSection } from "@/components/contact-section"
 import { IntentionSection } from "@/components/Intention/intention-section"
 import { GovernanceSection } from "@/components/Governance/governance-section"
+import { IotSection } from "@/components/IoT/iot-section"
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <IntentionSection />
       <GovernanceSection />
+      <IotSection/>
       <KnowledgeSection />
       <ReferencesSection />
       <ContactSection />

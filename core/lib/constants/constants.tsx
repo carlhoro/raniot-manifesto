@@ -21,3 +21,7 @@ export const INTENTION_SECTION = {
     closingCaption: "Aquí se documentan y se presentan decisiones reales sobre transformación digital, automatización e IoT.",
     buttonCaption: "Explorar manifiesto en github."
 } as const
+
+export const ARCHITECTURE_SECTION = {
+    buttonCaption: "Explorar repositorio de arquitectura."
+} as const

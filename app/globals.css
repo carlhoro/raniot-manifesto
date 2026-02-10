@@ -13,6 +13,17 @@
       z-index: 2;
     }
 
+    .architecture-logo-bg {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+  
+    .architecture-logo-bg > * {
+      position: relative;
+      z-index: 2;
+    }
+
 /* ===== sm layers ===== */
     @media (min-width: 100px) {
   
@@ -171,5 +182,71 @@
         );
       }
     }
-  }
-  
+    
+    /* ===== sm layers ===== */
+    @media (min-width: 100px) {
+      
+      /* LOGO: estructural, muy sutil */
+      .architecture-logo-bg::before {
+        width: 10%;
+        opacity: 0.50;
+        content: "";
+        position: absolute;
+        inset-block: 0;
+        bottom: 10%;
+        background-image: url("/logo/GitHub_Invertocat_Black.png");
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+        z-index: 0;
+        pointer-events: none;
+
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          #000 0%,
+          transparent 65%
+        );
+
+        mask-image: linear-gradient(
+          to bottom,
+          #000 75%,
+          transparent 95%
+        );
+      }
+    }
+
+    /* ===== Desktop & sm+ layers ===== */
+    @media (min-width: 640px) {
+
+      /* LOGO: estructural, muy sutil */
+      .architecture-logo-bg::before {
+        width: 40%;
+        content: "";
+        position: absolute;
+        inset-block: 0;
+        right: -20;
+        bottom: -20;
+
+        background-image: url("/logo/GitHub_Invertocat_Black.png");
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+
+        opacity: 0.60; /* ↓↓↓ mucho más sutil */
+        z-index: 0;
+        pointer-events: none;
+
+        -webkit-mask-image: linear-gradient(
+          to top,
+          #000 0%,
+          transparent 65%
+        );
+
+        mask-image: linear-gradient(
+          to top,
+          #000 0%,
+          transparent 85%
+        );
+      }
+    }
+   }

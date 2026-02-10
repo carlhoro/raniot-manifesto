@@ -25,3 +25,7 @@ export const INTENTION_SECTION = {
 export const ARCHITECTURE_SECTION = {
     buttonCaption: "Explorar repositorio de arquitectura."
 } as const
+
+export const IOT_SECTION = {
+    buttonCaption: "Explorar repositorio piloto de IOT."
+} as const

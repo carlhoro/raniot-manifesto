@@ -35,7 +35,7 @@ export function HeroSection() {
                       transition-transform">
                 <span className="grid place-items-center min-h-18 px-4 text-center">{HERO_SECTIONS.DigiGov}</span>
               </a>
-              <a href="#conocimiento" className="relative overflow-hidden rounded-2xl col-span-2 bg-gray-100 py-2 sm:py-4 opacity-70
+              <a href="#Knowledge" className="relative overflow-hidden rounded-2xl col-span-2 bg-gray-100 py-2 sm:py-4 opacity-70
                       hover:border-0 hover:bg-linear-to-br from-cyan-600 via-cyan-500 to-cyan-200  hover:scale-95 hover:text-accent-foreground
                       transition-transform duration-200 ease-out">
                 <span className="grid place-items-center min-h-18 px-4 text-center"> {HERO_SECTIONS.knowledge}</span>

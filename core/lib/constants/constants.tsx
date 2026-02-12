@@ -37,3 +37,21 @@ export const KNOWLEDGE_SECTION = {
     captionOpenning: "El objetivo es generar un conocimiento acumulativo y trazable. Cada implementación, experimento o ajuste operativo deja evidencia: lo que funcionó, lo que no, bajo qué condiciones y por qué. Nada se pierde ni se reinicia; lo aprendido se documenta, se versiona y se reutiliza cuando es pertinente.",
     captionClosing: "El resultado es un cuerpo de conocimiento vivo, que crece con cada caso real y permite reducir la improvisación en futuras decisiones. La transformación digital deja de depender de intuiciones aisladas y pasa a apoyarse en aprendizajes comprobados, replicables y contextualizados."
 } as const
+
+export const PERSONAL_SECTION = {
+    intro: "Ingeniero biomedico y desarrollador que entiende que la tecnología no tiene valor si no resuelve problemas reales.Mi interés por el IoT no nació como una tendencia, sino como una inquietud personal por integrar hardware software y datos en un solo sistema funcional. Quería construir. Probar. Fallar. Mejorar. Volver a construir. <strong>RANIOT</strong> fue el primer escenario donde esa intención tomó forma concreta siendo un desafio técnico, regulatorio y estratégico. y el inicio del camino hacia el desarrollo y la transformacion digital.",
+    recognition : "Los mismos reconocimientos que le fueron conferidos como proyecto destacado a nivel regional y nacional. Permiten sustentar el potencial de integrar datos desde el hardware y como no hay que tener temor abordar temas regulatorios.",
+    inflection: "Ahora entiendo que los equipos que buscan formentar una disciplina interna y aumentar el valor de su producto representan la oportunidad de seguir construyendo. No desde el discurso, sino desde el prototipo. Desde el microcontrolador. Desde el dato capturado en el mundo físico. No era solo conectar sensores. Era diseñar sistemas completos.",
+    inflectionTitle: "El punto de inflexión",
+    inflectionCaption: "Con el tiempo entendí que el IoT era solo una capa. El verdadero desafío no era conectar dispositivos. Era transformar organizaciones y ahí empezó una evolución natural hacia la <strong>transformación digital.</strong> Lo aprendido construyendo dispositivos físicos ahora lo aplico orquestando sistemas digitales completos con la evidencia de la academia.",
+    orchestrationTitle: "Orquestación de procesos digitales.",
+    orchestrationCaption: "No busco digitalizar por moda. Busco transformar con criterio. diferenciando la digitalización de la digitización",
+    visionTitle: "Mi visión es consolidar un HUB de I+D enfocado en la transformación digital y el desarrollo de talento.",
+    visionItem1: "Tecnología aplicada.",
+    visionItem2: "Orquestación digital.",
+    visionItem3: "Integración entre mundo físico y digital.",
+    visionItem4: "Investigación práctica con impacto real.",
+    visionCaption: "El IoT fue el inicio. <strong>La transformación digital es la evolución.</strong>",
+
+
+} as const

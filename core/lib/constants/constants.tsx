@@ -1,3 +1,5 @@
+import { title } from "process"
+
 export const HERO_CONTENT = {
     title: "Ing. Carlos Hoyos",
     lead: "Mi lead",
@@ -28,6 +30,15 @@ export const ARCHITECTURE_SECTION = {
 
 export const IOT_SECTION = {
     buttonCaption: "Explorar repositorio piloto de IOT."
+} as const
+
+export const CONTACT_SECTION = {
+    headercaption: "Contacto",
+    title: "Si te interesa hablar sobre transformación digital, IoT, arquitectura de sistemas o colaboración académica, el mejor canal es LinkedIn.",
+    caption: "Comparto avances, reflexiones y proyectos en desarrollo. Escríbeme directamente y conversemos sobre cómo llevar la tecnología de la idea a la implementación real.",
+    linkButton: "Click para conectar conmigo en LinkedIn",
+    footer: "Tecnología con criterio. Implementación con propósito."
+
 } as const
 
 export const KNOWLEDGE_SECTION = {

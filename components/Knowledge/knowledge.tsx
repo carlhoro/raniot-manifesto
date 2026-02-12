@@ -12,7 +12,6 @@ export function Knowledge() {
                     <li className="flex gap-x-3 py-5">
                         <svg
                         viewBox="0 0 20 20"
-                        fill="currentColor"
                         aria-hidden="true"
                         className="mt-1 size-5 flex-none text-indigo-600 dark:text-indigo-400"
                         >
@@ -26,14 +25,13 @@ export function Knowledge() {
                             <strong className="font-semibold text-gray-900 dark:text-white">
                                 {KNOWLEDGE_SECTION.titleList}
                             </strong>
-                            a sección de Conocimiento actúa como un puente explícito entre la investigación académica y la operación real.
                         </span>
                     </li>
                     <p className="mb-4 font-light">{KNOWLEDGE_SECTION.captionOpenning}</p>
                     <p className="mb-4 font-medium">{KNOWLEDGE_SECTION.captionClosing}</p>
                     <a href="#hero" className="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
                         Volver a Hero
-                        <svg className="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                        <svg className="ml-1 w-6 h-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path></svg>
                     </a>
                 </div>
             </div>

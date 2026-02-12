@@ -10,29 +10,21 @@ export function Personal() {
                         {PERSONAL_SECTION.intro}
                     </p>
                     <p> {PERSONAL_SECTION.recognition}</p>
-                    <p> 
-                        {PERSONAL_SECTION.inflection}
-                    </p>
+                    <p> {PERSONAL_SECTION.inflection} </p>
                     <h2 className="">
                         {PERSONAL_SECTION.inflectionTitle}
                     </h2>
-                    <p>
-                        {PERSONAL_SECTION.inflectionCaption}
-                    </p>
+                    <p> {PERSONAL_SECTION.inflectionCaption} </p>
                     <h2>{PERSONAL_SECTION.orchestrationTitle}</h2>
-                    <p>
-                        {PERSONAL_SECTION.orchestrationCaption}
-                    </p>
-                    <p>
-                        {PERSONAL_SECTION.visionTitle}
-                        <ul>
-                            <li>{PERSONAL_SECTION.visionItem1}.</li>
-                            <li>{PERSONAL_SECTION.visionItem2}.</li>
-                            <li>{PERSONAL_SECTION.visionItem3}.</li>
-                            <li>{PERSONAL_SECTION.visionItem4}.</li>
-                        </ul>
-                        <p>{PERSONAL_SECTION.visionCaption}</p>
-                    </p>
+                    <p> {PERSONAL_SECTION.orchestrationCaption} </p>
+                    {PERSONAL_SECTION.visionTitle}
+                    <ul>
+                        <li>{PERSONAL_SECTION.visionItem1}.</li>
+                        <li>{PERSONAL_SECTION.visionItem2}.</li>
+                        <li>{PERSONAL_SECTION.visionItem3}.</li>
+                        <li>{PERSONAL_SECTION.visionItem4}.</li>
+                    </ul>
+                    <p>{PERSONAL_SECTION.visionCaption}</p>
                 </div>
                 <div>
                     <div className="mt-8">

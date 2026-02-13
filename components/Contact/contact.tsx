@@ -1,4 +1,5 @@
 import { CONTACT_SECTION } from "@/core/lib/constants/constants";
+import { ReturnToHeroButton } from "../layout/returnHeroButton";
 
 export function Contact() {
     return (
@@ -33,7 +34,7 @@ export function Contact() {
                                 <img
                                     src="/logo/linkedin.png"
                                     alt="LinkedIn"
-                                    className="w-20 h-20 sm:w-12 sm:h-12 md:w-20 lg:h-30 lg:w-30 md:h-20 mt-4 hover hover:scale-105 hover:bg-blue-500"
+                                    className="w-20 h-20 sm:w-12 sm:h-12 md:w-20 lg:h-30 lg:w-30 md:h-20 mt-4 hover hover:scale-105"
                                 />  
                             </div>
                             <div className="p-4 w-sm">
@@ -42,10 +43,9 @@ export function Contact() {
                             </span>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
-                </a>
+            </a>
         </div>
         <footer className="mt-24 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-muted-foreground">

@@ -2,10 +2,7 @@ import { CONTACT_SECTION } from "@/core/lib/constants/constants";
 
 export function Contact() {
     return (
-      <section
-        id="contacto"
-        className="px-6 md:px-12 lg:px-24 py-24 max-w-7xl mx-auto"
-      >
+      <section id="contacto" className="w-full px-6 py-10 lg:px-24 lg:py-10 lg:max-w-7xl mx-auto" >
         <div className="">
             <p className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">
                 {CONTACT_SECTION.headercaption}
@@ -28,7 +25,7 @@ export function Contact() {
                             <img
                                 src="/logo/QR.jpeg"
                                 alt="LinkedIn"
-                                className="w-6 h-6 sm:w-12 sm:h-12  md:w-20 md:h-20  lg:w-64 lg:h-64"
+                                className="w-0 h-0 sm:w-30 sm:h-30 md:w-50 md:h-50  lg:w-64 lg:h-64"
                             /> 
                         </div>
                         <div className="row-span-2 grid place-content-center">
@@ -36,11 +33,11 @@ export function Contact() {
                                 <img
                                     src="/logo/linkedin.png"
                                     alt="LinkedIn"
-                                    className="w-20 h-20 mt-4 hover hover:scale-105 hover:bg-blue-500"
+                                    className="w-20 h-20 sm:w-12 sm:h-12 md:w-20 lg:h-30 lg:w-30 md:h-20 mt-4 hover hover:scale-105 hover:bg-blue-500"
                                 />  
                             </div>
-                            <div className=" p-4 w-sm">
-                            <span className="font-medium text-3xl tracking-wide text-gray-400">
+                            <div className="p-4 w-sm">
+                            <span className="font-medium text-xl sm:text-2xl md:text-3xl lg:text-3xl tracking-wide text-gray-400">
                                 {CONTACT_SECTION.linkButton}
                             </span>
                             </div>

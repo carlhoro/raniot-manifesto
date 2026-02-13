@@ -2,8 +2,8 @@ import { ARCHITECTURE_SECTION } from "@/core/lib/constants/constants";
 
 export function Governance() {
     return (
-        <section id="architecture" className="w-full px-6 py-16 flex justify-center items-center" >
-            <div className= "bg-linear-to-tl from-gray-100 from-50% to-cyan-300 w-full max-w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+        <section id="architecture" className="w-full px-6 py-10 lg:px-24 lg:py-10 flex justify-center items-center" >
+            <div className= "bg-linear-to-tl from-gray-100 from-50%  to-cyan-300 max-w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center rounded-2xl pr-4">
                 <div className=" p-6 flex flex-col items-center text-center md:col-span-2 lg:col-span-2">
                     <h2 className="text-3xl font-extrabold text-gray-900">Orquestacion de operaciones digitales</h2>
                     <p className=" text-black my-4 text-center mt-10 font-medium font-stretch-110%">
@@ -37,16 +37,16 @@ export function Governance() {
                         </a>
                     </div>
                 </div>
-                <div className="architecture-logo-bg bg-white rounded-xl shadow p-14 flex flex-col items-center text-center border-4 border-gray-700/30">
+                <div className="architecture-logo-bg bg-white rounded-xl shadow p-14 md:p-6 ms:p-2 flex flex-col items-center text-center border-4 border-gray-700/30">
                     <h3 className="text-xl font-semibold text-gray-900">
                     Orquestar antes que automatizar.
                     </h3>
-                    <div className="mt-6 space-y-5 text-sm text-gray-600">
+                    <div className="mt-6 space-y-5 text-sm lg:text-lg text-gray-600">
                         <div>
                             <p className="font-medium text-gray-900">
                                 Gobierno Digital
                             </p>
-                            <p className="mt-1 pt-5">
+                            <p className="mt-1 pt-3">
                                 Microsoft 365 como base para identidad,
                                 control documental, trazabilidad y operación
                                 institucional.
@@ -57,7 +57,7 @@ export function Governance() {
                             <p className="font-medium text-gray-900">
                                 Automatización
                             </p>
-                            <p className="mt-1 pt-5">
+                            <p className="mt-1 pt-3">
                                 n8n como capa de orquestación de flujos,
                                 integración entre sistemas y ejecución de
                                 lógica operativa.
@@ -68,7 +68,7 @@ export function Governance() {
                             <p className="font-medium text-gray-900">
                                 Comunicación
                             </p>
-                            <p className="mt-1 pt-5">
+                            <p className="mt-1 pt-3">
                                 WhatsApp y ecosistema Meta como canal de
                                 interacción, notificación y cierre del ciclo
                                 operativo.

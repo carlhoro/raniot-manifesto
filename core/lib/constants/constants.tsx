@@ -18,7 +18,7 @@ export const HERO_SECTIONS = {
 }as const
 
 export const INTENTION_SECTION = {
-    tittle: "la transformación digital que se propone aquí no es discursiva ni basada en tendencias, sino construida a partir de evidencia empírica.",
+    tittle: "La transformación digital que se propone aquí no es discursiva ni basada en tendencias, sino construida a partir de evidencia empírica.",
     introCaption: "Esta pagina esta viva y evoluciona con el contenido de transformacion digital que le da vida. /n Asi refleja cómo pensar, diseñar y orquestar tecnología /ncon criterio, antes que con tendencias.",
     closingCaption: "Aquí se documentan y se presentan decisiones reales sobre transformación digital, automatización e IoT.",
     buttonCaption: "Explorar manifiesto en github."
@@ -29,7 +29,19 @@ export const ARCHITECTURE_SECTION = {
 } as const
 
 export const IOT_SECTION = {
-    buttonCaption: "Explorar repositorio piloto de IOT."
+    buttonCaption: "Explorar repositorio piloto de IOT.",
+    headerCaption: "PMV IoT · El punto donde tu digitalizacion se conecta con el mundo real",
+    title: "Durante la planeación y antes de escalar, se prueba.",
+    subHeader: "Los sistemas de transformación digital no operan en abstracto. Desde la arquitectura se debe planear como <strong>los procesos de tranformacion digital interactúaran con el mundo real</strong>, del mismo modo en que lo hacen las organizaciones: a través de procesos físicos, personas, infraestructura y límites concretos del negocio.",
+    caption: "Una arquitectura digital se completa cuando es capaz de ser contrastada con la realidad. Por eso, junto a la orquestación de operaciones digitales mostrada anteriormente, se diseña un repositorio específico para pruebas piloto IoT que permiten validar decisiones técnicas antes de escalar cuidando acotando la inversion necesaria.",
+    listItem1: "Los sensores, actuadores y flujos de datos se prueban en condiciones reales para identificar límites físicos, errores y comportamientos no ideales.",
+    strongListItem1: "Prototipos funcionales Usando el ESP8266: ",
+    strongListItem2: "Evidencia para decidir invertir.",
+    listItem2: "El objetivo de los codigos del repositorio PMV-IoT no es construir productos finales, sino generar evidencia técnica que respalde decisiones de arquitectura y operación.",
+    secondCaption: "Este enfoque se refleja en el repositorio piloto IoT PMV-IoT, donde la experimentación se documenta como parte integral del proceso de diseño. Probar primero permite diseñar después con mayor claridad, coherencia y sostenibilidad.",
+    closingCaption: "No se trata de diseñar componentes aislados se trata de pasar a la fase de implementacion con la informacion empirica necesaria. Así los sistemas digitales se crean de forma consistente con la evidencia, y las personas que los operan.",
+    closingHeader: "Arquitectura digital con capacidad de dialogar con la realidad.",
+
 } as const
 
 export const CONTACT_SECTION = {
@@ -39,7 +51,7 @@ export const CONTACT_SECTION = {
     linkButton: "Click para conectar conmigo en LinkedIn",
     footer: "Tecnología con criterio. Implementación con propósito."
 
-} as const
+} as const 
 
 export const KNOWLEDGE_SECTION = {
     headercaption: "Usar el conocimiento de la academia para implementar transformacion digital en empresas · ",

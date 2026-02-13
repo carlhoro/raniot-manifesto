@@ -2,9 +2,9 @@ import { KNOWLEDGE_SECTION } from "@/core/lib/constants/constants";
 
 export function Knowledge() {
     return (
-        <section id="Knowledge" className="bg-white dark:bg-gray-900">
-            <div className="py-4 px-4 mx-auto max-w-7xl lg:py-16 lg:px-6">
-                <div className="max-w-5xl text-gray-500 sm:text-lg dark:text-gray-400">
+        <section id="Knowledge" className="w-full px-6 py-10 lg:px-24 lg:py-10 bg-white dark:bg-gray-900 flex justify-center items-center">
+            <div className="py-4 px-4 mx-auto max-w-full lg:py-16 lg:px-6">
+                <div className="max-w-7xl text-gray-500 sm:text-lg dark:text-gray-400">
                     <p className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">
                         {KNOWLEDGE_SECTION.headercaption}
                     </p>

@@ -2,14 +2,14 @@ import { INTENTION_SECTION } from "@/core/lib/constants/constants";
 
 export function Intention() {
   return (
-            <section id="intention" className="w-full pl-6 md:pl-12 lg:pl-24 sm:py-2 md:py-10 lg:py-20 mx-auto">
+            <section id="intention" className="w-full px-6 md:pl-12 lg:px-24 lg:py-10 sm:py-2 md:py-10 mx-auto">
               <div className="p-3">
                 <div className="ml-auto">
                   <div className="relative z-20 rounded-lg shadow-xl overflow-hidden  lg:grid lg:grid-cols-2 lg:gap-4 lg:min-h-110 
                     bg-gray-500 bg-linear-to-tr from-gray-700 from-65% to-cyan-300 ">
                     <div className="py-10 pl-6 sm:pt-16 sm:px-8 lg:py-16 lg:pr-0">
                       <div className="lg:self-center">
-                        <h2 className="leading-9 sm:py-4 lg:py-8 font-extrabold text-white sm:text-4xl lg:text-5xl sm:leading-10">
+                        <h2 className="leading-9 sm:py-4 lg:py-8 font-extrabold text-white sm:text-2xl md:text-3xl lg:text-4xl sm:leading-10">
                             <span className="block">{INTENTION_SECTION.tittle}</span>
                         </h2>
                         <p className="mt-4 text-base leading-6 text-white lg:text-1xl">

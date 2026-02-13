@@ -1,5 +1,4 @@
 import { CONTACT_SECTION } from "@/core/lib/constants/constants";
-import { ReturnToHeroButton } from "../layout/returnHeroButton";
 
 export function Contact() {
     return (

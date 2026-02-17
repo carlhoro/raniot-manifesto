@@ -1,4 +1,4 @@
-import {DIGITAL_GOV_CONTENT } from "@/core/lib/constants/constants";
+import {ARCHITECTURE_SECTION, DIGITAL_GOV_CONTENT } from "@/core/lib/constants/constants";
 
 export function Governance() {
     return (
@@ -66,10 +66,11 @@ export function Governance() {
                                 {DIGITAL_GOV_CONTENT.comunicationCaption}
                             </p>
                         </div>
-
                         <div className="pt-2 flex justify-center">
                             <a href="https://github.com/carlhoro/raniot-digital-operations-orchestration" target="_blank"
-                                className="mt-8 rounded-md shadow px-6 py-3 inline-flex items-center text-base leading-6 font-medium bg-red-400  text-white transition duration-150 ease-in-out">
+                                className="mt-8 rounded-md shadow px-6 py-3 inline-flex items-center text-base leading-6
+                                           font-medium bg-red-400  text-white transition duration-150 ease-in-out">
+                                            
                                 {ARCHITECTURE_SECTION.buttonCaption}
                             </a>
                         </div>

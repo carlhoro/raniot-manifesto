@@ -2,9 +2,9 @@ import { title } from "process"
 
 export const HERO_CONTENT = {
     title: "Ing. Carlos Hoyos",
-    lead: "Mi lead",
+    lead: "Arquitectura digital, IoT y orquestación de operaciones con criterio academico. Desde los articulos publicados filtramos y extraemos la implementaciones en transformacion digital.",
     statement: "Declaración",
-    closing: "Frase de cierre"
+    closing: "Primero se diseña la arquitectura. Después se automatiza."
 } as const 
 
 

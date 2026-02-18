@@ -7,7 +7,6 @@ export const HERO_CONTENT = {
     closing: "Primero se diseña la arquitectura. Después se automatiza."
 } as const 
 
-
 export const HERO_SECTIONS = {
     Intention: "Mi intención",
     InternetOfThings: "IoT",
@@ -17,10 +16,9 @@ export const HERO_SECTIONS = {
     Contact: "Contacto"
 } as const
 
-
 export const DIGITAL_GOV_CONTENT = {
     title: "Orquestación de operaciones digitales.",
-    caption: "La transformación digital real no se trata de automatizar tareas aisladas, sino de orquestar operaciones digitales con criterio, gobierno y continuidad. Por esto, como ingeniero, entiendo la creación de tres capas pensadas en la escalabilidad de cada una de ellas. Cada capa cumple una función clara.",
+    caption: "La transformación digital real no se trata de automatizar tareas aisladas, sino de orquestar operaciones digitales con criterio, usando herramientas que representan una infraestructura confiable sobre la cual construir una arquitectura sostenible. Por esto, como ingeniero, entiendo la creación de tres capas pensadas en la escalabilidad de cada una de ellas. Cada capa cumple una función clara.",
     tool365: "Por qué Copilot 365",
     tooln8n: "Por qué n8n",
     toolWhatsapp: "Por qué WhatsApp",
@@ -33,6 +31,14 @@ export const DIGITAL_GOV_CONTENT = {
     comunicationCaption: "WhatsApp y el ecosistema Meta como canal de interacción, notificación y cierre del ciclo operativo."
 } as const 
 
+export const GOVERMENT_MODAL_OPTIONS = {
+    whatsapp: "whatsapp",
+    n8n: "n8n",
+    copilot: "copilot",
+    whatsappTitle: "Comunicación",
+    copilotTitle: "Gobierno digital",
+    n8nTitle: "Automatización"
+} as const
 
 export const INTENTION_SECTION = {
     tittle: "La transformación digital que se propone aquí no es discursiva ni basada en tendencias, sino construida a partir de evidencia empírica.",

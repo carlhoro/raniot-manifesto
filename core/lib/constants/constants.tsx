@@ -24,11 +24,13 @@ export const DIGITAL_GOV_CONTENT = {
     toolWhatsapp: "Por qué WhatsApp",
     headerGov: "Orquestar antes que automatizar.",
     digitalGovermentTitle: "Gobierno Digital",
-    digitalGovermentCaption: "Microsoft 365 como base para identidad, control documental, trazabilidad y operación institucional.",
+    digitalGovermentCaption: "Microsoft 365 como núcleo de identidad, control documental y trazabilidad institucional. No es solo herramienta, es la base de gobierno, cumplimiento y continuidad operativa.",
     orchestrationTitle: "Automatización",
-    orchestrationCaption: "n8n como capa de orquestación de flujos, integración entre sistemas y ejecución de lógica operativa.",
+    orchestrationCaption: "n8n como capa de orquestación entre sistemas. Permite integrar datos, ejecutar lógica operativa y mantener coherencia entre procesos distribuidos.",
     comunicationTitle: "Comunicación",
-    comunicationCaption: "WhatsApp y el ecosistema Meta como canal de interacción, notificación y cierre del ciclo operativo."
+    comunicationCaption: "WhatsApp y el ecosistema Meta como canal estructurado de interacción. No solo notificación, sino cierre del ciclo operativo con evidencia y registro.",
+    operativeTitle: "Acceso a la capa operativa",
+    operativeCaption: "La capa operativa contiene contratos versionados, flujos reales y decisiones arquitectónicas aplicadas en contexto. Es la dimensión donde la teoría se convierte en implementación trazable."
 } as const 
 
 export const GOVERMENT_MODAL_OPTIONS = {

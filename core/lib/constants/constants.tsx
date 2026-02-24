@@ -2,9 +2,9 @@ import { title } from "process"
 
 export const HERO_CONTENT = {
     title: "Ing. Carlos Hoyos",
-    lead: "Arquitectura digital, IoT y orquestación de operaciones con criterio academico. Desde los articulos publicados filtramos y extraemos la implementaciones en transformacion digital.",
+    lead: "Analizo literatura académica, contrasto implementaciones documentadas y estudio casos reales para identificar patrones críticos en la puesta en marcha de procesos digitales. A partir de esa evidencia estructuro modelos aplicables a la transformación digital en PYMES, los implemento en empresas aliadas y patrocinadores estratégicamente seleccionados, y retroalimento el proceso para consolidar un conocimiento cada vez más robusto. Esta es una apuesta deliberada por generar conocimiento aplicado, no simplemente ejecutar proyectos.",
     statement: "Declaración",
-    closing: "Primero se diseña la arquitectura. Después se automatiza."
+    closing: "La transformación digital no empieza con software.Empieza con investigación rigurosa, análisis crítico y arquitectura bien diseñada."
 } as const 
 
 export const HERO_SECTIONS = {

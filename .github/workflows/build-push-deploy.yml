@@ -3,7 +3,7 @@
 on:
   push:
     branches:
-      - main
+      - develop
 
 env:
   IMAGE_NAME: raniot-manifesto
@@ -80,8 +80,8 @@ jobs:
 
               git config --global --add safe.directory "$APP_DIR"
               git fetch origin
-              git checkout main
-              git pull origin main
+              git checkout develop
+              git pull origin develop
 
               if [ ! -f .env ]; then
                 cat > .env <<EOT

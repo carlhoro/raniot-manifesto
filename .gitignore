@@ -16,8 +16,24 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files
-.env*
+# env files (never upload production secrets)
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# secret material
+secrets/
+.secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# private deployment notes
+DEPLOY_PRIVATE.md
 
 # vercel
 .vercel

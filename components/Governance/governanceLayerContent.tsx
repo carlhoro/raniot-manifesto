@@ -1,5 +1,5 @@
 interface LayerContentProps {
-    variant: "copilot" | "n8n" | "whatsapp";
+    variant: "copilot" | "powerAutomate" | "n8n" | "whatsapp";
   }
   
   export default function GovernanceLayerContent({ variant }: LayerContentProps) {
@@ -14,6 +14,16 @@ interface LayerContentProps {
             "Su aporte clave es estructurar identidad, permisos, trazabilidad documental y control operativo. A través de Entra ID, SharePoint, Teams y el ecosistema de cumplimiento, se define quién puede hacer qué, bajo qué reglas y con qué evidencia registrada. Esto convierte la transformación digital en un proceso auditable y sostenible.",
             "Dentro del conjunto arquitectónico, esta capa actúa como el marco de gobierno. Sin identidad estructurada y control documental no existe continuidad operativa. Es la base sobre la que se orquestan las demás capas."
           ]
+      },
+      powerAutomate: {
+        title: "Power Automate",
+        accent: "from-blue-600 to-sky-400",
+        border: "border-blue-500/40",
+        paragraphs: [
+          "Trabajo con Power Automate para traducir procesos definidos en flujos: desencadenantes, aprobaciones, notificaciones y seguimiento. La automatización debe responder a una necesidad concreta y tener responsables claros.",
+          "Su cercanía con Microsoft 365 permite vincular tareas, documentos y colaboración; cada conector, permiso y tratamiento de datos exige revisión antes de llevar un flujo a producción.",
+          "Power Automate y n8n pueden resolver problemas distintos. El criterio no es imponer una herramienta, sino elegir la integración adecuada y comprobar su funcionamiento."
+        ]
       },
       n8n: {
         title: "Automatización",

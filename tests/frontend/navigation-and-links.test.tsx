@@ -11,6 +11,7 @@ describe("Frontend navigation and links", () => {
       "#architecture",
       "#Knowledge",
       "#personal",
+      "#enterprise-ai",
       "#contacto",
       "#hero",
     ]

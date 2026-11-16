@@ -1,0 +1,107 @@
+﻿name: Build, Push and Deploy (Raniot)
+
+on:
+  push:
+    branches:
+      - develop
+
+env:
+  IMAGE_NAME: raniot-manifesto
+  APP_DIR: /opt/raniot-manifesto
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      tag: ${{ steps.vars.outputs.tag }}
+      image: ${{ steps.img.outputs.image }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set tag
+        id: vars
+        run: echo "tag=${GITHUB_SHA}" >> $GITHUB_OUTPUT
+
+      - name: Set image ref
+        id: img
+        run: echo "image=ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}" >> $GITHUB_OUTPUT
+
+      - name: Login to GHCR
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build image
+        run: docker build -t ${{ steps.img.outputs.image }}:${{ steps.vars.outputs.tag }} .
+
+      - name: Push image
+        run: docker push ${{ steps.img.outputs.image }}:${{ steps.vars.outputs.tag }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_DESKTOP_PRIVATE_KEY_DEPLOY }}" > ~/.ssh/id_rsa
+          sed -i 's/\r$//' ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+          ssh-keygen -y -f ~/.ssh/id_rsa > /dev/null
+
+      - name: Deploy to VPS
+        env:
+          GHCR_USERNAME: ${{ secrets.GHCR_USERNAME }}
+          GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+          TAG: ${{ needs.build.outputs.tag }}
+          IMAGE: ${{ needs.build.outputs.image }}
+          APP_DIR: ${{ env.APP_DIR }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          ssh \
+            -i ~/.ssh/id_rsa \
+            -o BatchMode=yes \
+            -o StrictHostKeyChecking=yes \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
+            "GHCR_USERNAME='$GHCR_USERNAME' GHCR_TOKEN='$GHCR_TOKEN' TAG='$TAG' IMAGE='$IMAGE' APP_DIR='$APP_DIR' REPOSITORY='$REPOSITORY' bash -s" <<'EOF'
+              set -euo pipefail
+
+              mkdir -p "$APP_DIR"
+              cd "$APP_DIR"
+
+              if [ ! -d .git ]; then
+                git clone "https://github.com/${REPOSITORY}.git" .
+              fi
+
+              git config --global --add safe.directory "$APP_DIR"
+              git fetch origin
+              git checkout develop
+              git pull origin develop
+
+              if [ ! -f .env ]; then
+                cat > .env <<EOT
+GHCR_IMAGE=$IMAGE
+IMAGE_TAG=$TAG
+NODE_ENV=production
+PORT=3000
+EOT
+              else
+                sed -i "s|^GHCR_IMAGE=.*|GHCR_IMAGE=$IMAGE|g" .env || true
+                sed -i "s|^IMAGE_TAG=.*|IMAGE_TAG=$TAG|g" .env || true
+                grep -q '^GHCR_IMAGE=' .env || echo "GHCR_IMAGE=$IMAGE" >> .env
+                grep -q '^IMAGE_TAG=' .env || echo "IMAGE_TAG=$TAG" >> .env
+              fi
+
+              printf '%s' "$GHCR_TOKEN" | docker login ghcr.io -u "$GHCR_USERNAME" --password-stdin
+
+              docker compose pull
+              docker compose up -d
+
+              unset GHCR_TOKEN
+              echo "Deploy completado: $IMAGE:$TAG"
+          EOF

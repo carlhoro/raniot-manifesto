@@ -1,0 +1,27 @@
+services:
+  app:
+    image: ${GHCR_IMAGE}:${IMAGE_TAG:-latest}
+    pull_policy: always
+    container_name: raniot-manifesto-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=root_default
+      - traefik.http.routers.raniot.rule=Host(`www.raniot.tech`) || Host(`raniot.tech`)
+      - traefik.http.routers.raniot.entrypoints=websecure
+      - traefik.http.routers.raniot.tls=true
+      - traefik.http.services.raniot.loadbalancer.server.port=3000
+      - traefik.http.routers.raniot-http.rule=Host(`www.raniot.tech`) || Host(`raniot.tech`)
+      - traefik.http.routers.raniot-http.entrypoints=web
+      - traefik.http.routers.raniot-http.middlewares=raniot-https-redirect
+      - traefik.http.middlewares.raniot-https-redirect.redirectscheme.scheme=https
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
+    name: root_default

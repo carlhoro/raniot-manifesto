@@ -16,6 +16,7 @@ concurrency:
 env:
   IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/raniot-manifesto
   APP_DIR: /opt/raniotLanding/raniot-manifesto
+  DEPLOY_USER: agenticdev
 
 jobs:
   build:
@@ -88,17 +89,19 @@ jobs:
       - name: Deploy main to VPS
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
-          VPS_USER: ${{ secrets.VPS_USER }}
           IMAGE: ${{ needs.build.outputs.image }}
           TAG: ${{ needs.build.outputs.tag }}
         run: |
           set -euo pipefail
-          test -n "$VPS_USER" || { echo "Missing secret VPS_USER" >&2; exit 1; }
-          ssh -i "$HOME/.ssh/id_ed25519" -o BatchMode=yes -o StrictHostKeyChecking=yes "$VPS_USER@$VPS_HOST" "bash -se -- '$IMAGE' '$TAG'" <<'REMOTE'
+          ssh -i "$HOME/.ssh/id_ed25519" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes "$DEPLOY_USER@$VPS_HOST" "bash -se -- '$IMAGE' '$TAG'" <<'REMOTE'
           set -euo pipefail
           IMAGE="$1"
           TAG="$2"
           APP_DIR="/opt/raniotLanding/raniot-manifesto"
+
+          test "$(id -un)" = "agenticdev" || { echo "Unexpected SSH user; expected agenticdev" >&2; exit 1; }
+          test -w "$APP_DIR" || { echo "agenticdev cannot write to $APP_DIR" >&2; exit 1; }
+          docker info > /dev/null || { echo "agenticdev cannot access the Docker daemon" >&2; exit 1; }
 
           test -d "$APP_DIR/.git" || { echo "Repository missing at $APP_DIR" >&2; exit 1; }
           cd "$APP_DIR"

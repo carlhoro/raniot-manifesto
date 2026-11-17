@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/Hero/hero-section"
 import { IntentionSection } from "@/components/Intention/intention-section"
 import { GovernanceSection } from "@/components/Governance/governance-section"
+import { EnterpriseAISection } from "@/components/EnterpriseAI/enterprise-ai-section"
 import { IotSection } from "@/components/IoT/iot-section"
 import { KnowledgeSection } from "@/components/Knowledge/knowledge-section"
 import { PersonalSection } from "@/components/Personal/personal-section"
@@ -11,10 +12,11 @@ export default function Home() {
     <main className="min-h-screen">
       <HeroSection />
       <IntentionSection />
+      <PersonalSection />
       <GovernanceSection />
       <IotSection/>
       <KnowledgeSection />
-      <PersonalSection/>
+      <EnterpriseAISection />
       <ContactSection />
     </main>
   )

@@ -1,16 +1,15 @@
-import { title } from "process"
-
 export const HERO_CONTENT = {
     title: "Ing. Carlos Hoyos",
-    lead: "Analizo literatura académica, contrasto implementaciones documentadas y estudio casos reales para identificar patrones críticos en la puesta en marcha de procesos digitales. A partir de esa evidencia estructuro modelos aplicables a la transformación digital en PYMES, los implemento en empresas aliadas y patrocinadores estratégicamente seleccionados, y retroalimento el proceso para consolidar un conocimiento cada vez más robusto. Esta es una apuesta deliberada por generar conocimiento aplicado, no simplemente ejecutar proyectos.",
+    lead: "Ingeniería aplicada a la arquitectura digital, la automatización con Power Automate, el IoT y la IA. Entender, prototipar y validar antes de escalar.",
     statement: "Declaración",
-    closing: "La transformación digital no empieza con software.Empieza con investigación rigurosa, análisis crítico y arquitectura bien diseñada."
+    closing: "Primero se diseña la arquitectura. Después se automatiza."
 } as const 
 
 export const HERO_SECTIONS = {
     Intention: "Mi intención",
     InternetOfThings: "IoT",
-    DigiGov: "Gobierno digital",
+    DigiGov: "Microsoft y automatización",
+    EnterpriseAI: "IA empresarial",
     knowledge: "Conocimiento",
     Reference: "Trayectoria",
     Contact: "Contacto"
@@ -18,15 +17,16 @@ export const HERO_SECTIONS = {
 
 export const DIGITAL_GOV_CONTENT = {
     title: "Orquestación de operaciones digitales.",
-    caption: "La transformación digital real no se trata de automatizar tareas aisladas, sino de orquestar operaciones digitales con criterio, usando herramientas que representan una infraestructura confiable sobre la cual construir una arquitectura sostenible. Por esto, como ingeniero, entiendo la creación de tres capas pensadas en la escalabilidad de cada una de ellas. Cada capa cumple una función clara.",
-    tool365: "Por qué Copilot 365",
+    caption: "Mi trabajo con Power Automate forma parte de un enfoque más amplio: diseñar procesos con criterio, conectar herramientas y conservar trazabilidad. Microsoft 365, Power Automate, n8n y los canales de comunicación cumplen funciones diferentes; la elección depende del proceso y de sus límites.",
+    tool365: "Por qué Microsoft 365",
+    toolPowerAutomate: "Por qué Power Automate",
     tooln8n: "Por qué n8n",
     toolWhatsapp: "Por qué WhatsApp",
     headerGov: "Orquestar antes que automatizar.",
     digitalGovermentTitle: "Gobierno Digital",
-    digitalGovermentCaption: "Microsoft 365 como núcleo de identidad, control documental y trazabilidad institucional. No es solo herramienta, es la base de gobierno, cumplimiento y continuidad operativa.",
-    orchestrationTitle: "Automatización",
-    orchestrationCaption: "n8n como capa de orquestación entre sistemas. Permite integrar datos, ejecutar lógica operativa y mantener coherencia entre procesos distribuidos.",
+    digitalGovermentCaption: "Microsoft 365 ofrece identidad, colaboración y gestión documental sobre las que se pueden definir permisos y trazabilidad. Su configuración y gobierno dependen de cada organización.",
+    orchestrationTitle: "Automatización con Power Automate y n8n",
+    orchestrationCaption: "Power Automate permite diseñar flujos dentro del ecosistema Microsoft y conectarlos con otros servicios; n8n ofrece otra vía para orquestar integraciones entre sistemas. Son herramientas distintas, no intercambiables por defecto.",
     comunicationTitle: "Comunicación",
     comunicationCaption: "WhatsApp y el ecosistema Meta como canal estructurado de interacción. No solo notificación, sino cierre del ciclo operativo con evidencia y registro.",
     operativeTitle: "Acceso a la capa operativa",
@@ -36,17 +36,33 @@ export const DIGITAL_GOV_CONTENT = {
 export const GOVERMENT_MODAL_OPTIONS = {
     whatsapp: "whatsapp",
     n8n: "n8n",
+    powerAutomate: "powerAutomate",
     copilot: "copilot",
     whatsappTitle: "Comunicación",
     copilotTitle: "Gobierno digital",
-    n8nTitle: "Automatización"
+    n8nTitle: "Orquestación con n8n",
+    powerAutomateTitle: "Power Automate"
 } as const
 
 export const INTENTION_SECTION = {
-    tittle: "La transformación digital que se propone aquí no es discursiva ni basada en tendencias, sino construida a partir de evidencia empírica.",
-    introCaption: "Esta página está viva y evoluciona con el contenido de transformación digital que le da vida.\nAsí refleja cómo pensar, diseñar y orquestar tecnología con criterio, antes que con tendencias.",
-    closingCaption: "Aquí se documentan y presentan decisiones reales sobre transformación digital, automatización e IoT.",
+    tittle: "Transformar con criterio: primero entender la capacidad, después elegir la tecnología.",
+    introCaption: "Este manifiesto reúne mi trabajo en arquitectura digital, automatización con Power Automate, IoT e inteligencia artificial. Cada iniciativa parte del trabajo de las personas y de los problemas que vale la pena resolver.",
+    closingCaption: "Distingo las propuestas de las implementaciones y busco evidencia antes de escalar. La IA guiada por capacidades empresariales es una de las iniciativas que desarrolla este enfoque.",
     buttonCaption: "Explorar manifiesto en GitHub."
+} as const
+
+export const ENTERPRISE_AI_SECTION = {
+    eyebrow: "Iniciativa en desarrollo · IA empresarial",
+    title: "Espacios de IA al servicio de las capacidades de la empresa.",
+    intro: "La propuesta es que los empleados encuentren apoyo especializado para su trabajo, sin convertir cada necesidad en un agente autónomo. La organización define el propósito de cada espacio, qué conocimiento utiliza y a qué recursos puede acceder.",
+    experienceTitle: "Para las personas",
+    experience: "Cada empleado conversa desde su propia cuenta en espacios autorizados. Puede recibir apoyo para consultar información y realizar tareas pertinentes a su área, mientras su historial de conversación permanece individual.",
+    architectureTitle: "Para la organización",
+    architecture: "Open WebUI configura espacios de trabajo especializados y cuentas individuales; Hermes reúne modelos, memoria y herramientas permitidas en perfiles por capacidad, que pueden servir a varios espacios y empleados. El proxy HIG se propone para verificar identidad y acceso al espacio antes de encaminar cada solicitud al perfil autorizado; no es un perfil por empleado.",
+    governanceTitle: "Para decidir con criterio",
+    governance: "El historial individual en Open WebUI, los documentos asignados al espacio y la memoria del perfil Hermes son ámbitos distintos. La memoria del perfil puede compartirse entre empleados autorizados, pero no recibe automáticamente todas sus conversaciones. Su contenido, las sesiones y los permisos de las herramientas requieren políticas y pruebas de separación; un perfil distinto no garantiza por sí solo aislamiento de recursos.",
+    value: "El valor buscado es incorporar IA al trabajo cotidiano con conocimiento pertinente, integración gradual y gobierno tecnológico propio, sin depender de una licencia exclusiva de esta propuesta. La arquitectura puede ser implementada por los equipos de la organización o por profesionales competentes.",
+    status: "Es una propuesta de arquitectura, no una implementación validada de HIG ni de todos sus controles e integraciones. Antes de operar, deben probarse la vinculación entre empleado, espacio y conversación, el acceso directo al modelo base, los límites de memoria y herramientas, la seguridad y los costos."
 } as const
 
 
@@ -73,7 +89,7 @@ export const IOT_SECTION = {
 
 export const CONTACT_SECTION = {
     headercaption: "Contacto",
-    title: "Si te interesa hablar sobre transformación digital, IoT, arquitectura de sistemas o colaboración académica, el mejor canal es LinkedIn.",
+    title: "Si te interesa conversar sobre Power Automate, automatización, IoT, arquitectura digital, IA o colaboración académica, el mejor canal es LinkedIn.",
     caption: "Comparto avances, reflexiones y proyectos en desarrollo. Escríbeme directamente y conversemos sobre cómo llevar la tecnología de la idea a la implementación real.",
     linkButton: "Click para conectar conmigo en LinkedIn",
     footer: "Tecnología con criterio. Implementación con propósito."
@@ -90,6 +106,9 @@ export const KNOWLEDGE_SECTION = {
 
 
 export const PERSONAL_SECTION = {
+    title: "Automatización, arquitectura, contratos digitales, orquestación",
+    imageCapitalAlt: "capital medellin",
+    imageRecognitionAlt: "udea premiacion",
     intro: "Ingeniero biomédico y desarrollador que entiende que la tecnología no tiene valor si no resuelve problemas reales. Mi interés por el IoT no nació como una tendencia, sino como una inquietud personal por integrar hardware, software y datos en un solo sistema funcional. Quería construir, probar, fallar, mejorar y volver a construir. RANIOT fue el primer escenario donde esa intención tomó forma concreta, siendo un desafío técnico, regulatorio y estratégico, y el inicio del camino hacia el desarrollo y la transformación digital.",
     recognition: "Los reconocimientos obtenidos como proyecto destacado a nivel regional y nacional sustentan el potencial de integrar datos desde el hardware y demuestran que no hay que temer abordar temas regulatorios.",
     inflection: "Ahora entiendo que los equipos que buscan fomentar una disciplina interna y aumentar el valor de su producto representan la oportunidad de seguir construyendo. No desde el discurso, sino desde el prototipo, desde el microcontrolador, desde el dato capturado en el mundo físico. No era solo conectar sensores; era diseñar sistemas completos.",
@@ -104,3 +123,51 @@ export const PERSONAL_SECTION = {
     visionItem4: "Investigación práctica con impacto real.",
     visionCaption: "El IoT fue el inicio. La transformación digital es la evolución."
 } as const
+
+export const GOVERNANCE_LAYER_CONTENT = {
+      copilot: {
+        title: "Gobierno Digital",
+        accent: "from-blue-600 to-cyan-400",
+        border: "border-blue-500/40",
+        paragraphs: [
+            "Microsoft 365 no se adopta como herramienta de oficina, sino como infraestructura institucional. Representa una base sólida y mantenible en el tiempo, respaldada por estándares globales de identidad, seguridad y cumplimiento. Apoyarse en plataformas consolidadas permite concentrar el esfuerzo en diseñar arquitectura, no en construir sistemas paralelos que ya existen y están probados.",
+            "Su aporte clave es estructurar identidad, permisos, trazabilidad documental y control operativo. A través de Entra ID, SharePoint, Teams y el ecosistema de cumplimiento, se define quién puede hacer qué, bajo qué reglas y con qué evidencia registrada. Esto convierte la transformación digital en un proceso auditable y sostenible.",
+            "Dentro del conjunto arquitectónico, esta capa actúa como el marco de gobierno. Sin identidad estructurada y control documental no existe continuidad operativa. Es la base sobre la que se orquestan las demás capas."
+          ]
+      },
+      powerAutomate: {
+        title: "Power Automate",
+        accent: "from-blue-600 to-sky-400",
+        border: "border-blue-500/40",
+        paragraphs: [
+          "Trabajo con Power Automate para traducir procesos definidos en flujos: desencadenantes, aprobaciones, notificaciones y seguimiento. La automatización debe responder a una necesidad concreta y tener responsables claros.",
+          "Su cercanía con Microsoft 365 permite vincular tareas, documentos y colaboración; cada conector, permiso y tratamiento de datos exige revisión antes de llevar un flujo a producción.",
+          "Power Automate y n8n pueden resolver problemas distintos. El criterio no es imponer una herramienta, sino elegir la integración adecuada y comprobar su funcionamiento."
+        ]
+      },
+      n8n: {
+        title: "Automatización",
+        accent: "from-rose-600 to-pink-400",
+        border: "border-rose-500/40",
+        paragraphs: [
+            "n8n no es simplemente una herramienta de automatización. Es la capa de orquestación que permite integrar plataformas consolidadas sin desarrollar software innecesario. Al apoyarse en APIs abiertas y en una comunidad activa, ofrece una base flexible y sostenible en el tiempo.",
+            "Su aspecto clave es la definición de contratos entre sistemas. Cada flujo conecta información y decisiones a partir de políticas previamente definidas por la organización. No se trata de ejecutar tareas sueltas, sino de materializar políticas operativas en procesos digitales coherentes y trazables.",
+            "Dentro del conjunto arquitectónico, n8n conecta gobierno y comunicación. Traduce las decisiones institucionales en acciones concretas. Sin esta capa, la arquitectura sería solo estructura; con ella, se convierte en operación."
+          ]
+      },
+      whatsapp: {
+        title: "Comunicación",
+        accent: "from-green-600 to-emerald-400",
+        border: "border-green-500/40",
+        paragraphs: [
+            "WhatsApp, dentro del ecosistema Meta, no se utiliza como simple canal de mensajería, sino como infraestructura de interacción transaccional. Apoyarse en una plataforma adoptada globalmente garantiza estabilidad, continuidad y familiaridad para el usuario final.",
+            "Al ser una herramienta de uso cotidiano para millones de personas, su adopción dentro de la arquitectura reduce fricción. La comunicación no requiere aprendizaje adicional: se integra naturalmente al flujo operativo, facilitando validaciones, notificaciones y decisiones en tiempo real.",
+            "Dentro del conjunto, esta capa representa la interfaz entre arquitectura y realidad. Es el punto donde la operación diseñada se encuentra con personas reales. Sin comunicación integrada, la transformación digital no se completa."
+          ]
+      }
+    } as const;
+
+export const SITE_COPY = {
+    title: "Carlos Hoyos | RANIOT",
+    description: "Posición profesional sobre transformación digital, gobernanza digital e IoT. Conocimiento técnico y académico aplicado a la práctica empresarial."
+} as const;

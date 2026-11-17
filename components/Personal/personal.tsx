@@ -5,7 +5,7 @@ export function Personal() {
         <section className="w-full px-6 py-10 lg:px-24 lg:py-10 bg-white dark:bg-gray-900">
             <div id="personal" className="gap-16 py-8 px-4 mx-auto lg:max-w-7xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 flex justify-center items-center">
                 <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Automatización, arquitectura, contratos digitales, orquestación</h2>
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{PERSONAL_SECTION.title}</h2>
                     <p className="mb-4">
                         {PERSONAL_SECTION.intro}
                     </p>
@@ -28,10 +28,10 @@ export function Personal() {
                 </div>
                 <div>
                     <div className="mt-8">
-                        <img className="w-full rounded-lg" src="/logo/capital.jpg" alt="capital medellin"/>
+                        <img className="w-full rounded-lg" src="/logo/capital.jpg" alt={PERSONAL_SECTION.imageCapitalAlt}/>
                     </div>
                     <div className="mt-8">
-                        <img className="w-full rounded-lg" src="/logo/ideaton.png" alt="udea premiacion"/>
+                        <img className="w-full rounded-lg" src="/logo/ideaton.png" alt={PERSONAL_SECTION.imageRecognitionAlt}/>
                     </div>
                 </div>
             </div>

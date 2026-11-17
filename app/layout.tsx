@@ -1,3 +1,4 @@
+import { SITE_COPY } from "@/core/lib/constants/constants";
 import React from "react"
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
@@ -10,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Carlos Hoyos | RANIOT',
-  description: 'Posición profesional sobre transformación digital, gobernanza digital e IoT. Conocimiento técnico y académico aplicado a la práctica empresarial.',
+  title: SITE_COPY.title,
+  description: SITE_COPY.description,
   generator: 'v0.app',
   icons: {
     icon: [

@@ -1,5 +1,3 @@
-import { title } from "process"
-
 export const HERO_CONTENT = {
     title: "Ing. Carlos Hoyos",
     lead: "Ingeniería aplicada a la arquitectura digital, la automatización con Power Automate, el IoT y la IA. Entender, prototipar y validar antes de escalar.",
@@ -108,6 +106,9 @@ export const KNOWLEDGE_SECTION = {
 
 
 export const PERSONAL_SECTION = {
+    title: "Automatización, arquitectura, contratos digitales, orquestación",
+    imageCapitalAlt: "capital medellin",
+    imageRecognitionAlt: "udea premiacion",
     intro: "Ingeniero biomédico y desarrollador que entiende que la tecnología no tiene valor si no resuelve problemas reales. Mi interés por el IoT no nació como una tendencia, sino como una inquietud personal por integrar hardware, software y datos en un solo sistema funcional. Quería construir, probar, fallar, mejorar y volver a construir. RANIOT fue el primer escenario donde esa intención tomó forma concreta, siendo un desafío técnico, regulatorio y estratégico, y el inicio del camino hacia el desarrollo y la transformación digital.",
     recognition: "Los reconocimientos obtenidos como proyecto destacado a nivel regional y nacional sustentan el potencial de integrar datos desde el hardware y demuestran que no hay que temer abordar temas regulatorios.",
     inflection: "Ahora entiendo que los equipos que buscan fomentar una disciplina interna y aumentar el valor de su producto representan la oportunidad de seguir construyendo. No desde el discurso, sino desde el prototipo, desde el microcontrolador, desde el dato capturado en el mundo físico. No era solo conectar sensores; era diseñar sistemas completos.",
@@ -122,3 +123,51 @@ export const PERSONAL_SECTION = {
     visionItem4: "Investigación práctica con impacto real.",
     visionCaption: "El IoT fue el inicio. La transformación digital es la evolución."
 } as const
+
+export const GOVERNANCE_LAYER_CONTENT = {
+      copilot: {
+        title: "Gobierno Digital",
+        accent: "from-blue-600 to-cyan-400",
+        border: "border-blue-500/40",
+        paragraphs: [
+            "Microsoft 365 no se adopta como herramienta de oficina, sino como infraestructura institucional. Representa una base sólida y mantenible en el tiempo, respaldada por estándares globales de identidad, seguridad y cumplimiento. Apoyarse en plataformas consolidadas permite concentrar el esfuerzo en diseñar arquitectura, no en construir sistemas paralelos que ya existen y están probados.",
+            "Su aporte clave es estructurar identidad, permisos, trazabilidad documental y control operativo. A través de Entra ID, SharePoint, Teams y el ecosistema de cumplimiento, se define quién puede hacer qué, bajo qué reglas y con qué evidencia registrada. Esto convierte la transformación digital en un proceso auditable y sostenible.",
+            "Dentro del conjunto arquitectónico, esta capa actúa como el marco de gobierno. Sin identidad estructurada y control documental no existe continuidad operativa. Es la base sobre la que se orquestan las demás capas."
+          ]
+      },
+      powerAutomate: {
+        title: "Power Automate",
+        accent: "from-blue-600 to-sky-400",
+        border: "border-blue-500/40",
+        paragraphs: [
+          "Trabajo con Power Automate para traducir procesos definidos en flujos: desencadenantes, aprobaciones, notificaciones y seguimiento. La automatización debe responder a una necesidad concreta y tener responsables claros.",
+          "Su cercanía con Microsoft 365 permite vincular tareas, documentos y colaboración; cada conector, permiso y tratamiento de datos exige revisión antes de llevar un flujo a producción.",
+          "Power Automate y n8n pueden resolver problemas distintos. El criterio no es imponer una herramienta, sino elegir la integración adecuada y comprobar su funcionamiento."
+        ]
+      },
+      n8n: {
+        title: "Automatización",
+        accent: "from-rose-600 to-pink-400",
+        border: "border-rose-500/40",
+        paragraphs: [
+            "n8n no es simplemente una herramienta de automatización. Es la capa de orquestación que permite integrar plataformas consolidadas sin desarrollar software innecesario. Al apoyarse en APIs abiertas y en una comunidad activa, ofrece una base flexible y sostenible en el tiempo.",
+            "Su aspecto clave es la definición de contratos entre sistemas. Cada flujo conecta información y decisiones a partir de políticas previamente definidas por la organización. No se trata de ejecutar tareas sueltas, sino de materializar políticas operativas en procesos digitales coherentes y trazables.",
+            "Dentro del conjunto arquitectónico, n8n conecta gobierno y comunicación. Traduce las decisiones institucionales en acciones concretas. Sin esta capa, la arquitectura sería solo estructura; con ella, se convierte en operación."
+          ]
+      },
+      whatsapp: {
+        title: "Comunicación",
+        accent: "from-green-600 to-emerald-400",
+        border: "border-green-500/40",
+        paragraphs: [
+            "WhatsApp, dentro del ecosistema Meta, no se utiliza como simple canal de mensajería, sino como infraestructura de interacción transaccional. Apoyarse en una plataforma adoptada globalmente garantiza estabilidad, continuidad y familiaridad para el usuario final.",
+            "Al ser una herramienta de uso cotidiano para millones de personas, su adopción dentro de la arquitectura reduce fricción. La comunicación no requiere aprendizaje adicional: se integra naturalmente al flujo operativo, facilitando validaciones, notificaciones y decisiones en tiempo real.",
+            "Dentro del conjunto, esta capa representa la interfaz entre arquitectura y realidad. Es el punto donde la operación diseñada se encuentra con personas reales. Sin comunicación integrada, la transformación digital no se completa."
+          ]
+      }
+    } as const;
+
+export const SITE_COPY = {
+    title: "Carlos Hoyos | RANIOT",
+    description: "Posición profesional sobre transformación digital, gobernanza digital e IoT. Conocimiento técnico y académico aplicado a la práctica empresarial."
+} as const;

@@ -123,7 +123,8 @@ export const PERSONAL_SECTION = {
     visionItem4: "Investigación práctica con impacto real.",
     visionCaption: "El IoT fue el inicio. La transformación digital es la evolución."
 } as const
-\nexport const GOVERNANCE_LAYER_CONTENT = {
+
+export const GOVERNANCE_LAYER_CONTENT = {
       copilot: {
         title: "Gobierno Digital",
         accent: "from-blue-600 to-cyan-400",
@@ -164,4 +165,9 @@ export const PERSONAL_SECTION = {
             "Dentro del conjunto, esta capa representa la interfaz entre arquitectura y realidad. Es el punto donde la operación diseñada se encuentra con personas reales. Sin comunicación integrada, la transformación digital no se completa."
           ]
       }
-    } as const;\n\nexport const SITE_COPY = {\n    title: "Carlos Hoyos | RANIOT",\n    description: "Posición profesional sobre transformación digital, gobernanza digital e IoT. Conocimiento técnico y académico aplicado a la práctica empresarial."\n} as const;\n
+    } as const;
+
+export const SITE_COPY = {
+    title: "Carlos Hoyos | RANIOT",
+    description: "Posición profesional sobre transformación digital, gobernanza digital e IoT. Conocimiento técnico y académico aplicado a la práctica empresarial."
+} as const;

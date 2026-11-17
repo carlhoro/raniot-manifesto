@@ -5,7 +5,7 @@ import LayerModal from "./governanaceModal";
 import {ARCHITECTURE_SECTION, DIGITAL_GOV_CONTENT, GOVERMENT_MODAL_OPTIONS } from "@/core/lib/constants/constants";
 import GovernanceLayerContent from "./governanceLayerContent";
 
-type LayerType = "copilot" | "n8n" | "whatsapp" | null;
+type LayerType = "copilot" | "powerAutomate" | "n8n" | "whatsapp" | null;
 
 export function Governance() {
 const [activeLayer, setActiveLayer] = useState<LayerType>(null);
@@ -38,6 +38,16 @@ const [activeLayer, setActiveLayer] = useState<LayerType>(null);
                             href="#"
                             onClick={(e) => {
                             e.preventDefault();
+                            setActiveLayer("powerAutomate");
+                            }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-blue-300 text-gray-800 text-md font-medium hover:bg-cyan-300 transition duration-400"
+                        >
+                            {DIGITAL_GOV_CONTENT.toolPowerAutomate}
+                        </a>
+                        <a
+                            href="#"
+                            onClick={(e) => {
+                            e.preventDefault();
                             setActiveLayer("n8n");
                             }}
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-rose-500 text-md text-gray-800 font-medium hover:bg-cyan-300 transition duration-400"
@@ -60,6 +70,7 @@ const [activeLayer, setActiveLayer] = useState<LayerType>(null);
                         onClose={() => setActiveLayer(null)}
                         title={
                             activeLayer === GOVERMENT_MODAL_OPTIONS.copilot ? GOVERMENT_MODAL_OPTIONS.copilotTitle : 
+                            activeLayer === GOVERMENT_MODAL_OPTIONS.powerAutomate ? GOVERMENT_MODAL_OPTIONS.powerAutomateTitle :
                             activeLayer === GOVERMENT_MODAL_OPTIONS.n8n ? GOVERMENT_MODAL_OPTIONS.n8nTitle :
                             activeLayer === GOVERMENT_MODAL_OPTIONS.whatsapp ? GOVERMENT_MODAL_OPTIONS.whatsappTitle : ""
                         }

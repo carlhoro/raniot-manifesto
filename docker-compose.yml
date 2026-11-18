@@ -13,6 +13,7 @@ services:
       - traefik.http.routers.raniot.rule=Host(`www.raniot.tech`) || Host(`raniot.tech`)
       - traefik.http.routers.raniot.entrypoints=websecure
       - traefik.http.routers.raniot.tls=true
+      - traefik.http.routers.raniot.tls.certresolver=mytlschallenge
       - traefik.http.services.raniot.loadbalancer.server.port=3000
       - traefik.http.routers.raniot-http.rule=Host(`www.raniot.tech`) || Host(`raniot.tech`)
       - traefik.http.routers.raniot-http.entrypoints=web

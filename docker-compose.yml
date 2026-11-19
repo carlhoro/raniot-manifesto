@@ -9,11 +9,11 @@ services:
       - PORT=3000
     labels:
       - traefik.enable=true
-      - traefik.docker.network=root_default
+      - traefik.docker.network=${TRAEFIK_NETWORK:?Set TRAEFIK_NETWORK in private VPS .env}
       - traefik.http.routers.raniot.rule=Host(`www.raniot.tech`) || Host(`raniot.tech`)
       - traefik.http.routers.raniot.entrypoints=websecure
       - traefik.http.routers.raniot.tls=true
-      - traefik.http.routers.raniot.tls.certresolver=mytlschallenge
+      - traefik.http.routers.raniot.tls.certresolver=${TRAEFIK_CERT_RESOLVER:?Set TRAEFIK_CERT_RESOLVER in private VPS .env}
       - traefik.http.services.raniot.loadbalancer.server.port=3000
       - traefik.http.routers.raniot-http.rule=Host(`www.raniot.tech`) || Host(`raniot.tech`)
       - traefik.http.routers.raniot-http.entrypoints=web
@@ -25,4 +25,4 @@ services:
 networks:
   web:
     external: true
-    name: root_default
+    name: ${TRAEFIK_NETWORK:?Set TRAEFIK_NETWORK in private VPS .env}

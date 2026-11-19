@@ -15,7 +15,6 @@ concurrency:
 
 env:
   IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/raniot-manifesto
-  APP_DIR: /opt/raniotLanding/raniot-manifesto
 
 jobs:
   build:
@@ -89,16 +88,19 @@ jobs:
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          APP_DIR: ${{ secrets.RANIOT_APP_DIR }}
           IMAGE: ${{ needs.build.outputs.image }}
           TAG: ${{ needs.build.outputs.tag }}
         run: |
           set -euo pipefail
           test -n "$DEPLOY_USER" || { echo "Missing secret DEPLOY_USER" >&2; exit 1; }
-          ssh -i "$HOME/.ssh/id_ed25519" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes "$DEPLOY_USER@$VPS_HOST" "bash -se -- '$IMAGE' '$TAG'" <<'REMOTE'
+          test -n "$APP_DIR" || { echo "Missing secret RANIOT_APP_DIR" >&2; exit 1; }
+          [[ "$APP_DIR" =~ ^/[A-Za-z0-9._/-]+$ ]] || { echo "Invalid RANIOT_APP_DIR path" >&2; exit 1; }
+          ssh -i "$HOME/.ssh/id_ed25519" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes "$DEPLOY_USER@$VPS_HOST" "bash -se -- '$IMAGE' '$TAG' '$APP_DIR'" <<'REMOTE'
           set -euo pipefail
           IMAGE="$1"
           TAG="$2"
-          APP_DIR="/opt/raniotLanding/raniot-manifesto"
+          APP_DIR="$3"
 
           REMOTE_USER="$(id -un)"
           test -w "$APP_DIR" || { echo "$REMOTE_USER cannot write to $APP_DIR" >&2; exit 1; }
